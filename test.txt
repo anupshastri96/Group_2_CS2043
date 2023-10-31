@@ -1,8 +1,20 @@
-/**
-*	
+/**	
 *	Jaspreet Bedi
 *	Ben Martin
-*
-*
 **/
+
+Average Rating Spike:
+Initial thoughts: 
+1. Have the average rating function display the up-to-date rating by taking individual inputs from the user, not necessarily storing the individual ratings, but keeping track of the avg rating.
+
+2. Have the array-list ratings for individual recipes, when a function still keeps track of the average, however, individual ratings can be accessed [problem: typical it’s a one user program, Solution: the most recent rating can be displayed for-front for the user].
+
+1. MAIN ------
+- Have an option to display recipes in order of best rating.
+
+-Have a check to ensure user enters a valid rating [0 – 5]
+
+--Decided to implement getter-setter functionality in case we implement an arraylist later.
+--Returns a string so a GUI Text or Label can work.
+--What if two ratings are the same??? [Maybe assign a specific user a specific index value if we're going the route of arraylist]
 
