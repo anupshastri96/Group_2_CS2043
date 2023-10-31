@@ -1,5 +1,3 @@
-package BackEnd.Ingredients;
-
 import java.io.Serializable;
 
 public class Ingredient implements Serializable {

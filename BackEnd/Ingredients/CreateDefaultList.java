@@ -1,5 +1,3 @@
-package BackEnd.Ingredients;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -21,7 +19,7 @@ public class CreateDefaultList {
         defaultIngredients.add(four);
         defaultIngredients.add(five);
 
-        try(ObjectOutputStream objOut = new ObjectOutputStream(new FileOutputStream("./BackEnd/Ingredients/defaultIngredients.bin"))) {
+        try(ObjectOutputStream objOut = new ObjectOutputStream(new FileOutputStream("defaultIngredients.bin"))) {
             objOut.writeObject(defaultIngredients);
         }
         catch (IOException ioe) {
