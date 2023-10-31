@@ -10,7 +10,6 @@ public class Ingredient implements Serializable {
         name = nameIn;
         available = false;
     }
-
     public void setAvailable(boolean in) {
         available = in;
     }
