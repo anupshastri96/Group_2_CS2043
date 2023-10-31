@@ -16,4 +16,8 @@ public class Ingredient {
     public boolean isAvailable() {
         return available;
     }
+
+    public String getName() {
+        return name;
+    }
 }
