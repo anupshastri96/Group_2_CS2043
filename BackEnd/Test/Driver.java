@@ -5,36 +5,10 @@ public class Driver{
 
     public static void main(String[] args) {
 
-        //Hard coding boolean ArrayList (f, f, t, f, t)
-
+        //Read in bool.bin, a serialized list of booleans equal to ingredient list length
         String boolPath = "bool.bin";
+        ArrayList<Boolean> boolArr = new ArrayList<Boolean>();
 
-        boolean b1 = false;
-        boolean b2 = false;
-        boolean b3 = true;
-        boolean b4 = false;
-        boolean b5 = true;
-
-        ArrayList<Boolean> boolArr = new ArrayList<>();
-
-        boolArr.add(b1);
-        boolArr.add(b2);
-        boolArr.add(b3);
-        boolArr.add(b4);
-        boolArr.add(b5);
-
-        //Storing the boolArr in bool.bin
-
-        try (FileOutputStream fileOutputStream = new FileOutputStream(boolPath);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-
-           objectOutputStream.writeObject(boolArr);
-         } catch (IOException e) {
-           e.printStackTrace();
-         }
-
-
-        //Read in bool.bin (redundant, but for the sake of demonstration)
         try (FileInputStream fileInputStream = new FileInputStream(boolPath);
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
 
@@ -43,7 +17,6 @@ public class Driver{
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
 
         //Read default ingredients in
         String filePath = "defaultIngredients.bin";
@@ -71,7 +44,7 @@ public class Driver{
         for(int i = 0; i < boolArr.size(); i++){
           name = defaultIngredientsList.get(i).getName();
           bool = defaultIngredientsList.get(i).isAvailable();
-          System.out.println(name+ " is available:" + bool);
+          System.out.println(name+ " is available: " + bool);
         }
 
         //modifies available attribute in ingredients list
@@ -84,7 +57,7 @@ public class Driver{
         for(int i = 0; i < boolArr.size(); i++){
           name = defaultIngredientsList.get(i).getName();
           bool = defaultIngredientsList.get(i).isAvailable();
-          System.out.println(name+ " is available:" + bool);
+          System.out.println(name+ " is available: " + bool);
         }
 
         //We can simply write the modified ingredient ArrayList to the .bin,
