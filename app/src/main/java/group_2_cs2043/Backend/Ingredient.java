@@ -204,7 +204,7 @@ public class Ingredient implements Serializable {
     Ingredient six = new Ingredient("Red Pepper Flakes", false);
     Ingredient seven = new Ingredient("Salmon Filets", false);
     //
-    Ingredient eight = new Ingredient("Chicken Breasts", false);
+    Ingredient eight = new Ingredient("Chicken Breast", false);
     Ingredient nine = new Ingredient("Olive Oil", false);
     //
     Ingredient ten = new Ingredient("Shrimp", false);
