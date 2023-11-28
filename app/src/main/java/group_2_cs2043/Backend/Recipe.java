@@ -200,8 +200,48 @@ public class Recipe implements Serializable {
     one.addRating(5);
     one.addRating(5);
 
+    //
+    Recipe two = new Recipe(
+      "Honey Dijon Chicken",
+      "Preheat your oven to 375°F (190°C). \n" +
+      "\n" +
+      "In a small bowl, mix together 2 tablespoons of honey and 2 tablespoons of Dijon Mustard. \n" +
+      "\n" +
+      "Place the chicken breasts in a baking dish and brush them with olive oil. \n" +
+      "\n" +
+      "Spread the honey-Dijon mixture evenly over the chicken. \n" +
+      "\n" +
+      "Bake in the preheated oven for 25-30 minutes or until the chicken is cooked through and juices run clear.",
+      Duration.ofMinutes(30),
+      2,
+      true
+    );
+    two.addIngredient("Chicken Breast", "2 breasts");
+    two.addIngredient("Honey", "2 tablespoons");
+    two.addIngredient("Dijon Mustard", "2 tablespoons");
+    two.addIngredient("Olive Oil", "1 tablespoon");
+    two.addRating(3);
+
+    //
+    Recipe three = new Recipe(
+      "Lemon Garlic Shrimp",
+      "In a bowl, toss shrimp with minced garlic and fresh lemon juice, ensuring each shrimp is well coated. \n" +
+      "\n" +
+      "Allow the mixture to marinate for at least 15 minutes to let the flavors infuse. \n" +
+      "\n" +
+      "Heat a skillet over medium-high heat, then cook the shrimp for 2-3 minutes on each side or until they turn pink and opaque. \n",
+      Duration.ofMinutes(15),
+      3,
+      true
+    );
+    three.addIngredient("Shrimp", "1 pound");
+    three.addIngredient("Lemon Juice", "1/4 cup");
+    three.addIngredient("Garlic", "2 cloves");
+
     // Add the recipes to the default list
     defaultRecipes.add(one);
+    defaultRecipes.add(two);
+    defaultRecipes.add(three);
 
     // Return the default recipes list
     return defaultRecipes;
